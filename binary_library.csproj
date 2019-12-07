@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="archive\archive.cs" />
-    <Compile Include="ArmRelocs.cs" />
+    <Compile Include="elf\ArmRelocs.cs" />
     <Compile Include="BinaryFile.cs" />
     <Compile Include="binary\binary.cs" />
     <Compile Include="binary\hex.cs" />
