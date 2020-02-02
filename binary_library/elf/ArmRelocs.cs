@@ -29,6 +29,8 @@ namespace binary_library.elf
     {
         /* ARM relocations */
         public const int R_ARM_THM_CALL = 10;
+        public const int R_ARM_THM_MOVW_ABS_NC = 47;
+        public const int R_ARM_THM_MOVT_ABS = 48;
 
         public class Rel_Arm_Thm_Call : IRelocationType
         {
@@ -76,5 +78,96 @@ namespace binary_library.elf
             { get { return 0; } }
         }
 
+        public class Rel_Arm_Thm_Movw_Abs_Nc : IRelocationType
+        {
+            public int Length
+            {
+                get { return 4; }
+            }
+
+            public ulong KeepMask
+            {
+                get { return 0xffff0000; }
+            }
+
+            public ulong SetMask
+            {
+                get { return 0x0000ffff; }
+            }
+
+            public string Name
+            {
+                get { return "R_ARM_THM_MOVW_ABS_NC"; }
+            }
+
+            public int Type
+            {
+                get { return (int)R_ARM_THM_MOVW_ABS_NC; }
+            }
+
+            public long Evaluate(IRelocation reloc)
+            {
+                // 
+                throw new NotImplementedException();
+            }
+
+            public long GetCurrentValue(IRelocation reloc)
+            {
+                throw new NotImplementedException();
+            }
+
+            public int BitLength
+            { get { return 32; } }
+            public bool IsSigned
+            { get { return false; } }
+            public int BitOffset
+            { get { return 0; } }
+        }
+
+        public class Rel_Arm_Thm_Movt_Abs : IRelocationType
+        {
+            public int Length
+            {
+                get { return 4; }
+            }
+
+            public ulong KeepMask
+            {
+                get { return 0x0000ffff; }
+            }
+
+            public ulong SetMask
+            {
+                get { return 0xffff0000; }
+            }
+
+            public string Name
+            {
+                get { return "R_ARM_THM_MOV_tABS"; }
+            }
+
+            public int Type
+            {
+                get { return (int)R_ARM_THM_MOVT_ABS; }
+            }
+
+            public long Evaluate(IRelocation reloc)
+            {
+                // 
+                throw new NotImplementedException();
+            }
+
+            public long GetCurrentValue(IRelocation reloc)
+            {
+                throw new NotImplementedException();
+            }
+
+            public int BitLength
+            { get { return 32; } }
+            public bool IsSigned
+            { get { return false; } }
+            public int BitOffset
+            { get { return 0; } }
+        }
     }
 }
