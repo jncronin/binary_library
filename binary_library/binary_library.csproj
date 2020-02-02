@@ -20,7 +20,6 @@
     <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="elf\ArmRelocs.cs" />
     <Compile Remove="tl\elfhash\Hash.cs" />
     <Compile Remove="tl\elfhash\HashReader.cs" />
     <Compile Remove="tl\elfhash\Program.cs" />
