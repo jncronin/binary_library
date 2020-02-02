@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyTitle>binary_library</AssemblyTitle>
+    <Product>binary_library</Product>
+    <Copyright>Copyright ©  2013</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Compile BareBones|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="elf\ArmRelocs.cs" />
+    <Compile Remove="tl\elfhash\Hash.cs" />
+    <Compile Remove="tl\elfhash\HashReader.cs" />
+    <Compile Remove="tl\elfhash\Program.cs" />
+    <Compile Remove="tl\tl\DefaultScripts.cs" />
+    <Compile Remove="tl\tl\LinkerScript.cs" />
+    <Compile Remove="tl\tl\Options.cs" />
+    <Compile Remove="tl\tl\Program.cs" />
+    <Compile Remove="tl\elfhash\Properties\AssemblyInfo.cs" />
+    <Compile Remove="tl\tl\Properties\AssemblyInfo.cs" />
+    <Compile Remove="tl\elfhash\obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="tl\elfhash\obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="tl\elfhash\obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Remove="tl\tl\obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="tl\tl\obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="tl\tl\obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
+</Project>
