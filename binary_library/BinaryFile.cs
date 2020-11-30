@@ -409,7 +409,7 @@ namespace binary_library
             return null;
         }
 
-        public virtual ISection CopySectionType(ISection tmpl)
+        public virtual ISection CopySectionType(ISection tmpl, string new_name)
         {
             ISection ret;
             if (tmpl is ContentsSection)
@@ -424,7 +424,7 @@ namespace binary_library
             ret.IsExecutable = tmpl.IsExecutable;
             ret.IsWriteable = tmpl.IsWriteable;
             ret.LoadAddress = tmpl.LoadAddress;
-            ret.Name = tmpl.Name;
+            ret.Name = new_name ?? tmpl.Name;
 
             AddSection(ret);
 

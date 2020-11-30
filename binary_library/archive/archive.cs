@@ -67,7 +67,7 @@ namespace binary_library.archive
             return false;
         }
 
-        public override ISection CopySectionType(ISection tmpl)
+        public override ISection CopySectionType(ISection tmpl, string new_name)
         {
             throw new NotImplementedException();
         }

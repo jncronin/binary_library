@@ -57,7 +57,7 @@ namespace binary_library
         int AddSection(ISection section);
         void RemoveSection(int idx);
 
-        ISection CopySectionType(ISection tmpl);
+        ISection CopySectionType(ISection tmpl, string new_name);
         ISection GetGlobalSection();
         ISection GetCommonSection();
         ISection CreateSection();

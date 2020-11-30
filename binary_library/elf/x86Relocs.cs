@@ -410,7 +410,7 @@ namespace binary_library.elf
 
         public class Rel_386_TLS_DTPOFF32 : IRelocationType
         {
-            public int Length => throw new NotImplementedException();
+            public int Length => 4;
 
             public ulong KeepMask => throw new NotImplementedException();
 
